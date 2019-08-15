@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import LifeCycle from './components/LifeCycle';
+import SetState from './components/SetState';
 
 
 class App extends Component {
@@ -8,7 +10,6 @@ class App extends Component {
     return <h1>welcome to react </h1>
 
   }
-
 
   time = () => {
     return Date().toString();
@@ -20,7 +21,11 @@ class App extends Component {
   const welcome = 'welcome to react'
 
     return (
-       <h1>{welcome} {this.getName()} {this.time()}</h1>
+      <div>
+        {/* <h1>{welcome} {this.getName()} {this.time()}</h1> */}
+        <LifeCycle />
+        <SetState />
+      </div>
     );
   }
 }
