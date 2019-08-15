@@ -10,14 +10,20 @@ class App extends Component {
   }
 
 
+  time = () => {
+    return Date().toString();
+  }
+
+
   render() {
 
   const welcome = 'welcome to react'
 
     return (
-       <h1>{welcome} {this.getName()}</h1>
+       <h1>{welcome} {this.getName()} {this.time()}</h1>
     );
   }
 }
 
 export default App;
+
