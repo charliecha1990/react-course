@@ -4,11 +4,16 @@ export default class Jsx extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            name: 'Charmie',
+            name: 'Charlie',
             gender:'male',
             age:29,
             items: [1,2,3,4]
         }
+
+
+        this.setState({
+            name: 'David'
+        });
         
     }
 
@@ -32,8 +37,9 @@ export default class Jsx extends Component {
         return (
             <div>
                 {/* conditional render using jsx */}
-                {shouldDisplay && <Product />}   
+                {/* {shouldDisplay && <Product />}    */}
                 {data}       
+                {this.state.name}
             </div>
         )
     }

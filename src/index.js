@@ -4,10 +4,10 @@ import App from './App.jsx';
 
 
 
-const time = () => {
+const time = () => { {/* <div> */}
     ReactDOM.render(
       <App />,
-      document.getElementById('root')
+      document.getElementById("root")   
     );
   
 
