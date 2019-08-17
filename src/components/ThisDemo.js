@@ -16,6 +16,10 @@ export default class ThisDemo extends Component {
        alert(param);
     }
 
+    sayHi = () => {
+        console.log(this)
+    }
+
 
     render() {
 
@@ -38,6 +42,7 @@ export default class ThisDemo extends Component {
                     Click me
                 </Button>    
                 {person.fullName()}
+                {this.sayHi()}
                 <br></br>
                 {this.test('Charlie','Zha')}
             </div>
