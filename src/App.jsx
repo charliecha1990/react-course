@@ -5,6 +5,7 @@ import Jsx from './components/Jsx';
 import ThisDemo from './components/ThisDemo';
 
 import MaterialUI from './components/MaterialUI';
+import Xiao from './components/Xiao';
 
 export default class App extends Component {
 
@@ -33,7 +34,8 @@ export default class App extends Component {
 
     return (
       <div>
-         {/* <h3>-------------------------------------</h3>
+        <Xiao test = '你好'></Xiao>
+         <h3>-------------------------------------</h3>
         <FunctionalComponent 
           comment='react真他妈牛逼'
           weather='sunnny'
@@ -42,19 +44,20 @@ export default class App extends Component {
         <h1>{welcome} {this.getName()} {this.time()}</h1>
         <h3>-------------------------------------</h3>
         <LifeCycle />
-        <h3>-------------------------------------</h3> */}
+      
+        <h3>-------------------------------------</h3> 
         <SetState />
         <MaterialUI />
         <ThisDemo />
-        {/* <h3>-------------------------------------</h3>
+         <h3>-------------------------------------</h3>
         <Jsx 
           shouldDisplay={true}
           data='hands boy'
         />
-        <h3>-------------------------------------</h3> */}
+        <h3>-------------------------------------</h3>
       </div>
     );
   }
-}
+}  {/* return中 注释  */}
 
 
