@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
+
 import LifeCycle from './components/LifeCycle';
 import SetState from './components/SetState';
 import Jsx from './components/Jsx';
 import ThisDemo from './components/ThisDemo';
-
 import MaterialUI from './components/MaterialUI';
+import Frannie from './components/Frannie' ;
+
 
 export default class App extends Component {
 
@@ -43,9 +45,10 @@ export default class App extends Component {
         <h3>-------------------------------------</h3>
         <LifeCycle />
         <h3>-------------------------------------</h3> */}
-        <SetState />
+        {/* <SetState />
         <MaterialUI />
-        <ThisDemo />
+        <ThisDemo /> */}
+        <Frannie data='Frannie'></Frannie>
         {/* <h3>-------------------------------------</h3>
         <Jsx 
           shouldDisplay={true}
