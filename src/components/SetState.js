@@ -1,6 +1,6 @@
-import React, { PureComponent } from 'react'
+import React, {Component } from 'react'
 
-export default class SetState extends PureComponent {
+export default class SetState extends Component {
 
     constructor(props) {
         super(props); 

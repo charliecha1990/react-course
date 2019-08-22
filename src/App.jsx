@@ -3,9 +3,9 @@ import LifeCycle from './components/LifeCycle';
 import SetState from './components/SetState';
 import Jsx from './components/Jsx';
 import ThisDemo from './components/ThisDemo';
-
 import MaterialUI from './components/MaterialUI';
 import Xiao from './components/Xiao';
+import Xiao1 from './components/Xiao1';
 
 export default class App extends Component {
 
@@ -34,7 +34,10 @@ export default class App extends Component {
 
     return (
       <div>
+      
         <Xiao test = '你好'></Xiao>
+        <Xiao1 data='也别来找我了'></Xiao1>
+
          <h3>-------------------------------------</h3>
         <FunctionalComponent 
           comment='react真他妈牛逼'

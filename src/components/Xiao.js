@@ -1,7 +1,6 @@
+import React, {Component } from 'react'
 
-import React, { PureComponent } from 'react'
-
-export default class Xiao extends PureComponent {
+class Xiao extends Component {//有状态
 
     constructor(props) {
         super(props); 
@@ -10,13 +9,17 @@ export default class Xiao extends PureComponent {
            date: '2019-8'
         }
     }
-
-    render() {
-        return (
+    
+    render(){
+        return(
             <div>
-                {this.state.date}  {/*STATE FROM  SELF*/ }
-                {this.props.test}  {/* PROPS FROM PARENTS*/ }
-            </div>
+                 {this.state.date} {/*STATE FROM  SELF*/ }
+                 {this.props.test} {/* PROPS FROM PARENTS*/ }
+                 <h1>Although you are so beautiful</h1>
+             </div>
         )
+        
     }
-}
+}   
+
+export default Xiao;
