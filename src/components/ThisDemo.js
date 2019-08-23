@@ -1,50 +1,27 @@
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';
+import React from 'react';
 
-
-export default class ThisDemo extends Component {
+export default class ThisDemo extends React.Component {
   
-  
-    test = (firstName, lastName) => {
-        this.firstName = firstName;
-        this.lastName = lastName;
-
-        return this.firstName + " " + this.lastName;
+    constructor (props) {
+        super(props);
+        this.state = {
+            message: 'zero'
         }
-
-    sayHello = param => {
-       alert(param);
+        this.sayHello = this.sayHello.bind(this);
     }
 
-    sayHi = () => {
+    sayHello() {
+        this.setState({
+            message: 'hello'
+        })
+        console.log(this.state.message)
         console.log(this)
     }
 
-
     render() {
-
-        const person = {
-            firstName: "Charlie",
-            lastName : "Zha",
-            id       : 5566,
-            fullName : function() {
-              return this.firstName + " " + this.lastName;
-            }
-          }
-
         return (
-            <div>
-                <Button 
-                   onClick={() => this.sayHello('Charlie Zha')}
-                   variant="contained" 
-                   color="primary"
-                >
-                    Click me
-                </Button>    
-                {person.fullName()}
-                {this.sayHi()}
-                <br></br>
-                {this.test('Charlie','Zha')}
+            <div> 
+                <button onClick={this.sayHello}>Say Hello</button>  
             </div>
         );
     }

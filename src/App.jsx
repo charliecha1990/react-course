@@ -10,6 +10,14 @@ import Frannie from './components/Frannie' ;
 
 export default class App extends Component {
 
+  constructor (props) {
+    super(props);
+
+    this.state = {
+      greetings: 'Hello World'
+    }
+  }
+
   getName = () => {  // ES6  =>  arrow function
     return <h1>welcome to react </h1>
   }
@@ -24,6 +32,9 @@ export default class App extends Component {
     return Date().toString();
   }
 
+  handleSayHello (greetings) {
+    alert(greetings)
+  }
 
   render() {
 
@@ -46,9 +57,9 @@ export default class App extends Component {
         <LifeCycle />
         <h3>-------------------------------------</h3> */}
         {/* <SetState />
-        <MaterialUI />
-        <ThisDemo /> */}
-        <Frannie data='Frannie'></Frannie>
+        <MaterialUI /> */}
+        <ThisDemo />
+        {/* <Frannie data='Frannie'></Frannie> */}
         {/* <h3>-------------------------------------</h3>
         <Jsx 
           shouldDisplay={true}
