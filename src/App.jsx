@@ -6,6 +6,8 @@ import Jsx from './components/Jsx';
 import ThisDemo from './components/ThisDemo';
 import MaterialUI from './components/MaterialUI';
 import Frannie from './components/Frannie' ;
+import EventLoop from './Javascript/EventLoop' ;
+
 
 
 export default class App extends Component {
@@ -66,6 +68,7 @@ export default class App extends Component {
           data='hands boy'
         />
         <h3>-------------------------------------</h3> */}
+        <EventLoop />
       </div>
     );
   }
