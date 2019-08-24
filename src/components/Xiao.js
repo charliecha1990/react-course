@@ -1,21 +1,24 @@
-import React, {Component } from 'react'
+import React, {PureComponent } from 'react'
+import Xiao1 from './Xiao1';
 
-class Xiao extends Component {//有状态
-
+class Xiao extends PureComponent {//有状态,PureComponent optimizes the performane
+       
     constructor(props) {
-        super(props); 
-        this.state = {
-           number: 1,
-           date: '2019-8'
-        }
+        super(props); // get the props from parents
     }
     
     render(){
+        // console.log(`props in Xiao is: ${this.props.status}`)
+
+        const data = {
+            number: 2,
+            date: '2018-8',
+            name: 'Xiao'
+        }
+
         return(
             <div>
-                 {this.state.date} {/*STATE FROM  SELF*/ }
-                 {this.props.test} {/* PROPS FROM PARENTS*/ }
-                 <h1>Although you are so beautiful</h1>
+               <Xiao1 xiaoStatus={this.props.appStatus}/>
              </div>
         )
         

@@ -5,9 +5,18 @@ import Jsx from './components/Jsx';
 import ThisDemo from './components/ThisDemo';
 import MaterialUI from './components/MaterialUI';
 import Xiao from './components/Xiao';
-import Xiao1 from './components/Xiao1';
 
 export default class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      number: 2019,
+      name: 'Frannie and Xiao',
+      date: '2019-08'
+    }
+  }
 
   getName = () => {  // ES6  =>  arrow function
     return <h1>welcome to react </h1>
@@ -35,10 +44,8 @@ export default class App extends Component {
     return (
       <div>
       
-        <Xiao test = '你好'></Xiao>
-        <Xiao1 data='也别来找我了'></Xiao1>
-
-         <h3>-------------------------------------</h3>
+        <Xiao appStatus={this.state}/>
+         {/* <h3>-------------------------------------</h3>
         <FunctionalComponent 
           comment='react真他妈牛逼'
           weather='sunnny'
@@ -57,7 +64,7 @@ export default class App extends Component {
           shouldDisplay={true}
           data='hands boy'
         />
-        <h3>-------------------------------------</h3>
+        <h3>-------------------------------------</h3> */}
       </div>
     );
   }
