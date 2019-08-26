@@ -4,15 +4,15 @@ import App from './App.jsx';
 
 
 
-const time = () => { {/* <div> */}
+// const time = () => { {/* <div> */}
     ReactDOM.render(
       <App />,
       document.getElementById("root")   
     );
   
 
-}
+// }
 
-setInterval(time,1000);
+// setInterval(time,1000);
 
 

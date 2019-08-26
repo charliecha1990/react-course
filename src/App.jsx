@@ -8,6 +8,7 @@ import MaterialUI from './components/MaterialUI';
 import Frannie from './components/Frannie' ;
 import EventLoop from './Javascript/EventLoop' ;
 import ShouldComponentUpdate from './components/ShouldComponentUpdate'
+import Hoc from './components/Hoc'
 
 
 
@@ -49,7 +50,8 @@ export default class App extends Component {
 
     return (
       <div>
-         <ShouldComponentUpdate />
+         {/* <ShouldComponentUpdate /> */}
+         <Hoc />
          {/* <h3>-------------------------------------</h3>
         <FunctionalComponent 
           comment='react真他妈牛逼'

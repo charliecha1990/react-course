@@ -1,6 +1,32 @@
 import React, { Component } from 'react';
-// import ShouldComponentUpdate_2 from './ShouldComponentUpdate_2';
 
+
+class TestPureComponent extends React.PureComponent { // PureComponent has the power of shallow compare props
+    render () {
+
+        console.log('TestPureComponent has been rendered')
+        return (
+            <div>
+                <h3>{this.props.date}</h3>
+                <h3>{this.props.name}</h3>
+                <h3>{this.props.author}</h3>
+            </div>
+        )
+    }       
+}
+
+const TestMemo = React.memo(props=> {  //Memo is decorated in HOC,which extends the power of shallow compare
+
+    console.log(props)
+    console.log('TestMemo has been rendered')
+    return (
+        <div>
+            <h3>{props.date}</h3>
+            <h3>{props.name}</h3>
+            <h3>{props.author}</h3>
+        </div>
+    )
+})
 
 class ShouldComponentUpdate_2 extends Component {  //ShouldComponentUpdate_2 will receive props from 1
     constructor (props) {
@@ -28,6 +54,7 @@ class ShouldComponentUpdate_2 extends Component {  //ShouldComponentUpdate_2 wil
 
 
     render() {
+        console.log('shouldComponentUpdate_2 has been rendered')
         return (
             <div>
                 <h3>{this.props.data.date}</h3>
@@ -62,8 +89,13 @@ export default class ShouldComponentUpdate extends Component {
 
     }
     render() {
+        console.log('shouldComponentUpdate has been rendered')
         return (
-            <ShouldComponentUpdate_2 data={this.state}/>
+            <div>
+                <ShouldComponentUpdate_2 data={this.state}/>
+                <TestPureComponent {...this.state}/>
+                <TestMemo {...this.state}/>
+            </div>
         );
     }
 }
