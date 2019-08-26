@@ -7,6 +7,7 @@ import ThisDemo from './components/ThisDemo';
 import MaterialUI from './components/MaterialUI';
 import Frannie from './components/Frannie' ;
 import EventLoop from './Javascript/EventLoop' ;
+import ShouldComponentUpdate from './components/ShouldComponentUpdate'
 
 
 
@@ -48,6 +49,7 @@ export default class App extends Component {
 
     return (
       <div>
+         <ShouldComponentUpdate />
          {/* <h3>-------------------------------------</h3>
         <FunctionalComponent 
           comment='react真他妈牛逼'
@@ -60,7 +62,7 @@ export default class App extends Component {
         <h3>-------------------------------------</h3> */}
         {/* <SetState />
         <MaterialUI /> */}
-        <ThisDemo />
+        {/* <ThisDemo /> */}
         {/* <Frannie data='Frannie'></Frannie> */}
         {/* <h3>-------------------------------------</h3>
         <Jsx 
@@ -68,7 +70,7 @@ export default class App extends Component {
           data='hands boy'
         />
         <h3>-------------------------------------</h3> */}
-        <EventLoop />
+        {/* <EventLoop /> */}
       </div>
     );
   }
