@@ -1,18 +1,18 @@
 const {injectBabelPlugin} = require('react-app-rewired')
 
-module.exports = function override(config, env) {
+module.exports = function override(config) {
 
-    injectBabelPlugin(
-        ['import', {
-            libraryName: 'antd',
-            libraryDirectory: 'es',
-            style: 'css'
-        }], config,
-    )
+    // injectBabelPlugin(
+    //     ['import', {
+    //         libraryName: 'antd',
+    //         libraryDirectory: 'es',
+    //         style: 'css'
+    //     }], config,
+    // )
 
     // add decorator
     config = injectBabelPlugin(
-        ['@Babel/plugin-proposal-decorators', {
+        ['@babel/plugin-proposal-decorators', {
             'legacy': true
         }],
         config,
