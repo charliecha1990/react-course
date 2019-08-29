@@ -9,7 +9,6 @@ import Frannie from './components/Frannie' ;
 import EventLoop from './Javascript/EventLoop' ;
 import ShouldComponentUpdate from './components/ShouldComponentUpdate'
 import Hoc from './components/Hoc'
-import Decorator from './components/Decorator'
 
 
 
@@ -52,7 +51,6 @@ export default class App extends Component {
     return (
       <div>
          {/* <ShouldComponentUpdate /> */}
-         <Decorator />
          <Hoc />
          {/* <h3>-------------------------------------</h3>
         <FunctionalComponent 
