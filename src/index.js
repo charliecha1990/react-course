@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App.jsx';
+import store from './store'
+import { Provider } from 'react-redux';
 
 
 
-// const time = () => { {/* <div> */}
-    ReactDOM.render(
-      <App />,
-      document.getElementById("root")   
-    );
-  
+  ReactDOM.render(
+    <Provider store={store}>
+      <App />
+    </Provider>
+   ,
+    document.getElementById("root")   
+  );
 
-// }
 
 // setInterval(time,1000);
 

@@ -2,9 +2,7 @@ import React, { PureComponent } from 'react';
 import Button from '@material-ui/core/Button';
 
 
-export default class  extends PureComponent {
-
-
+export default class extends PureComponent {
 
     count = array => {
         array.forEach(e => {

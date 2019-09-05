@@ -9,10 +9,9 @@ import Frannie from './components/Frannie' ;
 import EventLoop from './Javascript/EventLoop' ;
 import ShouldComponentUpdate from './components/ShouldComponentUpdate'
 import Hoc from './components/Hoc'
-import Decorator from './components/Decorator'
-
-
-
+import Decorator from './Javascript/Decorator'
+import Closure from './Javascript/Closure'
+import ReduxTest from './components/ReduxTest'
 
 export default class App extends Component {
 
@@ -52,8 +51,10 @@ export default class App extends Component {
 
     return (
       <div>
+         <ReduxTest />
          {/* <ShouldComponentUpdate /> */}
-         <Decorator />
+         {/* <Decorator />
+         <Closure /> */}
          {/* <Hoc /> */}
          {/* <h3>-------------------------------------</h3>
         <FunctionalComponent 
