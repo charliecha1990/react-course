@@ -12,6 +12,9 @@ import Hoc from './components/Hoc'
 import Decorator from './Javascript/Decorator'
 import Closure from './Javascript/Closure'
 import ReduxTest from './components/ReduxTest'
+import SplitButton from './components/SplitButton'
+import SimpleTable from './components/SimpleTable'
+import MaterialTableDemo from './components/MaterialTableDemo'
 
 export default class App extends Component {
 
@@ -51,7 +54,7 @@ export default class App extends Component {
 
     return (
       <div>
-         <ReduxTest />
+         {/* <ReduxTest /> */}
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />
          <Closure /> */}
@@ -66,10 +69,13 @@ export default class App extends Component {
         <h3>-------------------------------------</h3>
         <LifeCycle />
         <h3>-------------------------------------</h3> */}
-        {/* <SetState />
-        <MaterialUI /> */}
+        {/* <SetState /> */}
+        {/* <MaterialUI /> */}
         {/* <ThisDemo /> */}
-        {/* <Frannie data='Frannie'></Frannie> */}
+        <Frannie data='Frannie'></Frannie>
+        <SplitButton />
+        <SimpleTable />
+        <MaterialTableDemo />
         {/* <h3>-------------------------------------</h3>
         <Jsx 
           shouldDisplay={true}

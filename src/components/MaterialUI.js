@@ -10,7 +10,7 @@ export default class MaterialUI extends Component {
 
 
     render() {
-        const Test = () => (
+        const Test = () => ( // no props
             <Button 
                 onClick={()=>{alert('Material-ui is cool')}}
                 variant="contained" 
@@ -24,3 +24,12 @@ export default class MaterialUI extends Component {
         )
     }
 }
+
+/* resources
+
+1.https://material-ui.com/zh/components/tables/
+
+2.https://www.npmjs.com/package/material-table
+
+3.https://www.creative-tim.com
+*/
