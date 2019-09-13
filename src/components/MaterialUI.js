@@ -1,29 +1,29 @@
-import React, { Component } from 'react';
-import Button from '@material-ui/core/Button';  // UI library for React, produced by Google
+// import React, { Component } from 'react';
+// import Button from '@material-ui/core/Button';  // UI library for React, produced by Google
 
-export default class MaterialUI extends Component {
-    constructor (props) {
-        super(props);
-        this.state = {
-        }
-    }
+// export default class MaterialUI extends Component {
+//     constructor (props) {
+//         super(props);
+//         this.state = {
+//         }
+//     }
 
 
-    render() {
-        const Test = () => ( // no props
-            <Button 
-                onClick={()=>{alert('Material-ui is cool')}}
-                variant="contained" 
-                color="primary">
-                Hello World
-            </Button>
-          );
+//     render() {
+//         const Test = () => ( // no props
+//             <Button 
+//                 onClick={()=>{alert('Material-ui is cool')}}
+//                 variant="contained" 
+//                 color="primary">
+//                 Hello World
+//             </Button>
+//           );
 
-        return (
-            <Test />
-        )
-    }
-}
+//         return (
+//             <Test />
+//         )
+//     }
+// }
 
 /* resources
 

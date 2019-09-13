@@ -15,6 +15,7 @@ import ReduxTest from './components/ReduxTest'
 import SplitButton from './components/SplitButton'
 import SimpleTable from './components/SimpleTable'
 import MaterialTableDemo from './components/MaterialTableDemo'
+import SignIn from './components/Loggin/SignIn'
 
 export default class App extends Component {
 
@@ -54,6 +55,7 @@ export default class App extends Component {
 
     return (
       <div>
+        <SignIn />
          {/* <ReduxTest /> */}
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />
@@ -72,10 +74,10 @@ export default class App extends Component {
         {/* <SetState /> */}
         {/* <MaterialUI /> */}
         {/* <ThisDemo /> */}
-        <Frannie data='Frannie'></Frannie>
+        {/* <Frannie data='Frannie'></Frannie>
         <SplitButton />
         <SimpleTable />
-        <MaterialTableDemo />
+        <MaterialTableDemo /> */}
         {/* <h3>-------------------------------------</h3>
         <Jsx 
           shouldDisplay={true}
