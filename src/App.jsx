@@ -15,6 +15,8 @@ import ReduxTest from './components/ReduxTest'
 import SplitButton from './components/SplitButton'
 import SimpleTable from './components/SimpleTable'
 import MaterialTableDemo from './components/MaterialTableDemo'
+import  LogIn from './components/LogIn'
+
 
 export default class App extends Component {
 
@@ -44,6 +46,11 @@ export default class App extends Component {
     alert(greetings)
   }
 
+  handleSubmit (event) {
+    console.log(event.target.value)
+
+  }
+
   render() {
 
   const welcome = 'welcome to react'
@@ -54,6 +61,7 @@ export default class App extends Component {
 
     return (
       <div>
+        <LogIn onSubmit={this.handleSubmit}/>
          {/* <ReduxTest /> */}
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />
@@ -72,10 +80,10 @@ export default class App extends Component {
         {/* <SetState /> */}
         {/* <MaterialUI /> */}
         {/* <ThisDemo /> */}
-        <Frannie data='Frannie'></Frannie>
+        {/* <Frannie data='Frannie'></Frannie>
         <SplitButton />
         <SimpleTable />
-        <MaterialTableDemo />
+        <MaterialTableDemo /> */}
         {/* <h3>-------------------------------------</h3>
         <Jsx 
           shouldDisplay={true}
