@@ -58,15 +58,16 @@ export default class App extends Component {
     // event.preventDefault();
     const email = this.state.email;
     const password = this.state.password;
+    const name =  this.state.name;
 
-    this.authenticate(email,password)
+    this.authenticate(email,password,name)
     // console.log('Credentials have been submitted')
     // console.log(email,password)
   }
 
-  authenticate(email,password){
+  authenticate(email,password,name){
     setTimeout(() => {
-      alert(`Your login has been successful with email:${email}}, password:${password}`)
+      alert(`Your login has been successful with email:${email}}, password:${password}, name:${name}`)
     }, 3000);
   }
  

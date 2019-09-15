@@ -121,6 +121,18 @@ const styles = theme => ({
             onChange={event => props.onChange("password", event)}
             value={props.password}
           />
+          <TextField
+            variant="outlined"
+            margin="normal"
+            required
+            fullWidth
+            name="name"
+            label="name"
+            type="name"
+            id="name"
+            onChange={event=> props.onChange("name", event)}
+            value={props.name}
+          />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
             label="Remember me"
