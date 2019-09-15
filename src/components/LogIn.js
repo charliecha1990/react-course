@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
+import { withStyles } from "@material-ui/core/styles";
 
 function Copyright() {
   return (
@@ -26,7 +27,32 @@ function Copyright() {
   );
 }
 
-const useStyles = makeStyles(theme => ({
+// const useStyles = makeStyles(theme => ({
+//   '@global': {
+//     body: {
+//       backgroundColor: theme.palette.common.white,
+//     },
+//   },
+//   paper: {
+//     marginTop: theme.spacing(8),
+//     display: 'flex',
+//     flexDirection: 'column',
+//     alignItems: 'center',
+//   },
+//   avatar: {
+//     margin: theme.spacing(1),
+//     backgroundColor: theme.palette.secondary.main,
+//   },
+//   form: {
+//     width: '100%', // Fix IE 11 issue.
+//     marginTop: theme.spacing(1),
+//   },
+//   submit: {
+//     margin: theme.spacing(3, 0, 2),
+//   },
+// }));
+
+const styles = theme => ({
   '@global': {
     body: {
       backgroundColor: theme.palette.common.white,
@@ -49,12 +75,16 @@ const useStyles = makeStyles(theme => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+});
 
-export default function SignIn(props) {
-  const classes = useStyles();
+ function LogIn (props) {
+
+  const classes = props.classes
+
+  console.log(props)
 
   return (
+
     <Container component="main" maxWidth="xs">
       <CssBaseline />
       <div className={classes.paper}>
@@ -64,7 +94,7 @@ export default function SignIn(props) {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <form className={classes.form} noValidate>
+        {/* <form className={classes.form} noValidate> */}
           <TextField
             variant="outlined"
             margin="normal"
@@ -74,6 +104,8 @@ export default function SignIn(props) {
             label="Email Address"
             name="email"
             autoComplete="email"
+            value={props.email}
+            onChange={event => props.onChange("email", event)}
             autoFocus
           />
           <TextField
@@ -86,6 +118,8 @@ export default function SignIn(props) {
             type="password"
             id="password"
             autoComplete="current-password"
+            onChange={event => props.onChange("password", event)}
+            value={props.password}
           />
           <FormControlLabel
             control={<Checkbox value="remember" color="primary" />}
@@ -97,7 +131,7 @@ export default function SignIn(props) {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={event=> props.onSubmit(event)}
+            onClick={props.onSubmit} // to submit email and password in app.jsx
           >
             Sign In
           </Button>
@@ -113,11 +147,14 @@ export default function SignIn(props) {
               </Link>
             </Grid>
           </Grid>
-        </form>
+        {/* </form> */}
       </div>
       <Box mt={8}>
         <Copyright />
       </Box>
     </Container>
-  );
+  );  
 }
+  
+
+export default withStyles(styles, { withTheme: true })(LogIn);

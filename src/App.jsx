@@ -24,13 +24,17 @@ export default class App extends Component {
     super(props);
 
     this.state = {
-      greetings: 'Hello World'
+      email: '',
+      password: ''
     }
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  getName = () => {  // ES6  =>  arrow function
-    return <h1>welcome to react </h1>
-  }
+  // getName = () => {  // ES6  =>  arrow function
+  //   return <h1>welcome to react </h1>
+  // }
 
   // getName();   
 
@@ -38,17 +42,50 @@ export default class App extends Component {
      
   // }
 
-  time = () => {
-    return Date().toString();
+  // time = () => {
+  //   return Date().toString();
+  // }
+
+  // handleSayHello (greetings) {
+  //   alert(greetings)
+  // }
+
+  componentDidMount() {
+
   }
 
-  handleSayHello (greetings) {
-    alert(greetings)
+  handleSubmit() {
+    // event.preventDefault();
+    const email = this.state.email;
+    const password = this.state.password;
+
+    this.authenticate(email,password)
+    // console.log('Credentials have been submitted')
+    // console.log(email,password)
   }
 
-  handleSubmit (event) {
-    console.log(event.target.value)
+  authenticate(email,password){
+    setTimeout(() => {
+      alert(`Your login has been successful with email:${email}}, password:${password}`)
+    }, 3000);
+  }
+ 
+  // handleSubmit = () => {  // Arrow functions bind this
+  //   // event.preventDefault();
+  //   const email = this.state.email;
+  //   const password = this.state.password;
 
+  //   console.log('Credentials have been submitted')
+  //   console.log(email,password)
+  // }
+
+  handleChange(type, event) {
+    this.setState({
+      [type]: event.target.value
+    })
+
+    // console.log(type)
+    // console.log(event)
   }
 
   render() {
@@ -61,7 +98,12 @@ export default class App extends Component {
 
     return (
       <div>
-        <LogIn onSubmit={this.handleSubmit}/>
+        <LogIn 
+          email={this.state.email}
+          password={this.state.password}
+          onSubmit={this.handleSubmit}
+          onChange={this.handleChange}
+        />
          {/* <ReduxTest /> */}
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />
