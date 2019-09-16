@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LifeCycle from './components/LifeCycle';
 import SetState from './components/SetState';
 import Jsx from './components/Jsx';
-
+import This from './components/This';
 
 class App extends Component {
 
@@ -23,7 +23,7 @@ class App extends Component {
 
     return (
       <div>
-        <h3>-------------------------------------</h3>
+        {/* <h3>-------------------------------------</h3>
         <h1>{welcome} {this.getName()} {this.time()}</h1>
         <h3>-------------------------------------</h3>
         <LifeCycle />
@@ -34,7 +34,8 @@ class App extends Component {
           shouldDisplay={true}
           data='hands boy'
         />
-        <h3>-------------------------------------</h3>
+        <h3>-------------------------------------</h3> */}
+        <This />
       </div>
     );
   }
