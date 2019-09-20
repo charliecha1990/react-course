@@ -16,6 +16,7 @@ import SplitButton from './components/SplitButton'
 import SimpleTable from './components/SimpleTable'
 import MaterialTableDemo from './components/MaterialTableDemo'
 import  LogIn from './components/LogIn'
+import LogIn1 from './components/LogIn1'
 
 
 export default class App extends Component {
@@ -24,13 +25,14 @@ export default class App extends Component {
     super(props);
 
     this.state = {
+      name: '',
+      number: '',
+      date: '',
       email: '',
-      password: '',
-      name: ''
     }
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick= this.handleClick.bind(this);
   }
 
   // getName = () => {  // ES6  =>  arrow function
@@ -55,23 +57,26 @@ export default class App extends Component {
 
   }
 
-  handleSubmit() {
+  handleClick() {
     // event.preventDefault();
     const email = this.state.email;
-    const password = this.state.password;
+    const date= this.state.date;
     const name = this.state.name;
+    const number = this.state.number;
 
-    this.authenticate(email,password,name)
+    this.authenticate(email,date,name,number)
     // console.log('Credentials have been submitted')
-    // console.log(email,password)
+    // console.log(email,date,name,number)
   }
 
-  authenticate(email,password,name){
+  authenticate(email,date,name,number){
     setTimeout(() => {
       alert(`Your login has been successful with 
-      email:${email}, 
-      password:${password},
-      name:${name}`)
+      name:${name}
+      number:${number}, 
+      date${date},
+      email:${email}`
+      )
     }, 3000);
   }
  
@@ -103,13 +108,22 @@ export default class App extends Component {
 
     return (
       <div>
+      <LogIn1 
+        name={this.state.name}
+        number={this.state.number}
+        date={this.state.date}
+        email={this.state.email}
+        onClick={this.handleClick}
+        onChange={this.handleChange}
+      />
+{/* 
         <LogIn 
           email={this.state.email}
           password={this.state.password}
           name={this.state.name}
           onSubmit={this.handleSubmit}
           onChange={this.handleChange}
-        />
+        /> */}
          {/* <ReduxTest /> */}
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />

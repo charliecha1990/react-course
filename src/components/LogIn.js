@@ -127,10 +127,10 @@ const styles = theme => ({
             required
             fullWidth
             id="name"
-            label="name"
+            label="Name"
             name="name"
             autoComplete="current-name"
-            value={props.email}
+            type="name"
             onChange={event => props.onChange("name", event)}
             value={props.name}
           />
