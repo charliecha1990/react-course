@@ -16,7 +16,8 @@ import SplitButton from './components/SplitButton'
 import SimpleTable from './components/SimpleTable'
 import MaterialTableDemo from './components/MaterialTableDemo'
 import  LogIn from './components/LogIn'
-
+import  SignIn from './components/SignIn'
+import RouterExample from './components/RouterExample'
 
 export default class App extends Component {
 
@@ -29,7 +30,7 @@ export default class App extends Component {
     }
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   // getName = () => {  // ES6  =>  arrow function
@@ -54,21 +55,22 @@ export default class App extends Component {
 
   }
 
-  handleSubmit() {
+  handleClick() {
     // event.preventDefault();
     const email = this.state.email;
     const password = this.state.password;
-    const name =  this.state.name;
 
-    this.authenticate(email,password,name)
+    //const name =  this.state.name;
+
+    this.authenticate(email,password)
     // console.log('Credentials have been submitted')
     // console.log(email,password)
   }
 
-  authenticate(email,password,name){
+  authenticate(email,password){
     setTimeout(() => {
-      alert(`Your login has been successful with email:${email}}, password:${password}, name:${name}`)
-    }, 3000);
+      alert(`Your login has been successful with email:${email}}, password:${password}`)
+    },  0);
   }
  
   // handleSubmit = () => {  // Arrow functions bind this
@@ -85,10 +87,11 @@ export default class App extends Component {
       [type]: event.target.value
     })
 
+  
     // console.log(type)
     // console.log(event)
   }
-
+  
   render() {
 
   const welcome = 'welcome to react'
@@ -99,12 +102,19 @@ export default class App extends Component {
 
     return (
       <div>
-        <LogIn 
+        <RouterExample />
+        {/*<SignIn 
+          email ={this.state.email}
+          password= {this.state.password}
+          onChange={this.handleChange}
+          onClick = {this.handleClick}
+        />*/}
+        {/*<LogIn 
           email={this.state.email}
           password={this.state.password}
           onSubmit={this.handleSubmit}
           onChange={this.handleChange}
-        />
+        />*/}
          {/* <ReduxTest /> */}
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />
