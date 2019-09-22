@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Home from './Router/Home'
 import About from './Router/About'
 import User from './Router/User'
+import Blog from './Router/Blog'
+import SignIn from './SignIn'
 
 
 // function Home() {
@@ -41,26 +43,17 @@ class RouterExample extends React.PureComponent {
     render() { 
 
         return (  
+            
             <Router>
                 <div>
                     {/* UI routing   */}
-                    <nav>
-                    <ul>
-                        <li>
-                            <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                            <Link to="/about/">About</Link>
-                        </li>
-                        <li>
-                            <Link to="/user/">Users</Link>
-                        </li>
-                    </ul>
-                    </nav>
+
                     {/* logical routing   */}
-                    <Route path="/" exact component={Home} />
+                    <Route path="/" exact component={SignIn} />
                     <Route path="/about/" component={About} />
                     <Route path="/user/" component={User} />
+                    <Route path="/blog/" component={Blog} />
+                    <Route path="/Home/" component={Home} />
                 </div>
             </Router>
         );
