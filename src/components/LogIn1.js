@@ -6,7 +6,6 @@ import Grid from '@material-ui/core/Grid';
 
 
 function LogIn1 (props){
-  const classes = props.cladsses
 
 console.log (props)
 
@@ -59,7 +58,7 @@ return(
             fullWidth
             variant="contained"
             color="primary"
-            onClick={props.onClick} // to submit email and password in app.jsx
+            onClick={()=> props.history.push('/home')} // to submit email and password in app.jsx
           >
             Click Here to Log In
           </Button>

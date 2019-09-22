@@ -17,6 +17,8 @@ import SimpleTable from './components/SimpleTable'
 import MaterialTableDemo from './components/MaterialTableDemo'
 import  LogIn from './components/LogIn'
 import LogIn1 from './components/LogIn1'
+import RouterXiao from './components/RouterXiao'
+
 
 
 export default class App extends Component {
@@ -108,14 +110,15 @@ export default class App extends Component {
 
     return (
       <div>
-      <LogIn1 
+      <RouterXiao />
+      {/* <LogIn1 
         name={this.state.name}
         number={this.state.number}
         date={this.state.date}
         email={this.state.email}
         onClick={this.handleClick}
         onChange={this.handleChange}
-      />
+      /> */}
 {/* 
         <LogIn 
           email={this.state.email}
