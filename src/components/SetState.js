@@ -20,6 +20,12 @@ export default class SetState extends PureComponent {
 
         // setInterval(()=>{},3000);
 
+        
+        setTimeout(()=>{
+            this.setState({
+                number: this.state.number+1
+            })
+        },4000);  // 3000ms = 3s
 
 
         setTimeout(() => {  // 异步函数

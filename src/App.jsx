@@ -15,7 +15,10 @@ import ReduxTest from './components/ReduxTest'
 import SplitButton from './components/SplitButton'
 import SimpleTable from './components/SimpleTable'
 import MaterialTableDemo from './components/MaterialTableDemo'
-import  LogIn from './components/LogIn'
+import LogIn from './components/LogIn'
+import DemoContext from './components/DemoContext'
+import Fundmental from './Javascript/Fundmental'
+
 
 
 export default class App extends Component {
@@ -98,15 +101,14 @@ export default class App extends Component {
 
     return (
       <div>
-<<<<<<< HEAD
-        {/* <h3>-------------------------------------</h3>
-=======
-        <LogIn 
+        <Fundmental />
+        {/* <DemoContext /> */}
+        {/* <LogIn 
           email={this.state.email}
           password={this.state.password}
           onSubmit={this.handleSubmit}
           onChange={this.handleChange}
-        />
+        /> */}
          {/* <ReduxTest /> */}
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />
@@ -118,7 +120,6 @@ export default class App extends Component {
           weather='sunnny'
         />
         <h3>-------------------------------------</h3>
->>>>>>> b3341827de529228dbe1475db02a65a7d6ccca60
         <h1>{welcome} {this.getName()} {this.time()}</h1>
         <h3>-------------------------------------</h3>
         <LifeCycle />
@@ -136,11 +137,7 @@ export default class App extends Component {
           data='hands boy'
         />
         <h3>-------------------------------------</h3> */}
-<<<<<<< HEAD
-        <This />
-=======
         {/* <EventLoop /> */}
->>>>>>> b3341827de529228dbe1475db02a65a7d6ccca60
       </div>
     );
   }
