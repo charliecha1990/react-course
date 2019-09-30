@@ -27,12 +27,20 @@ export default class Society extends React.Component {
         this.changeName = this.changeName.bind(this);
     }
 
-    changeName (value) {
-        this.setState({
-           name: value
-        })
+
+    componentDidMount () {
+        setTimeout(()=> this.setState({
+            name: 'value'
+         }),3000)
     }
 
+    changeName (value) {
+        setTimeout(this.setState({
+            name: value
+        }),3000)
+    }
+
+    
     showName () {
         console.log('my name is charlie')
     }
