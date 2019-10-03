@@ -18,7 +18,8 @@ import MaterialTableDemo from './components/MaterialTableDemo'
 import LogIn from './components/LogIn'
 import DemoContext from './components/DemoContext'
 import Fundmental from './Javascript/Fundmental'
-
+import Hooks from './components/Hooks'
+import ImmediatelyInvokedFunctionExpression from './Javascript/ImmediatelyInvokedFunctionExpression'
 
 
 export default class App extends Component {
@@ -101,7 +102,9 @@ export default class App extends Component {
 
     return (
       <div>
-        <Fundmental />
+        <ImmediatelyInvokedFunctionExpression />
+        {/* <Hooks /> */}
+        {/* <Fundmental /> */}
         {/* <DemoContext /> */}
         {/* <LogIn 
           email={this.state.email}

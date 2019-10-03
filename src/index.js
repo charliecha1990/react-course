@@ -5,20 +5,20 @@ import store from './store'
 import { Provider } from 'react-redux';
 import Society from './components/Society'
 
-  // ReactDOM.render(
-  //   <Provider store={store}>
-  //     <App />
-  //   </Provider>
-  //  ,
-  //   document.getElementById("root")   
-  // );
-
-
   ReactDOM.render(
-    <Society />
+    <Provider store={store}>
+      <App />
+    </Provider>
    ,
     document.getElementById("root")   
   );
+
+
+  // ReactDOM.render(
+  //   <Society />
+  //  ,
+  //   document.getElementById("root")   
+  // );
 
 // setInterval(time,1000);
 

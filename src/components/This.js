@@ -2,12 +2,12 @@ import React, { PureComponent } from 'react'
 
 export default class This extends PureComponent {
 
-    // sayHello = () => {
-    //     this.firstName = 'Charlie';
-    //     this.lastName = 'Zha';
-    //     console.log('say hello',this)
-    //     console.log(this.firstName+this.lastName)
-    // }
+    sayHello = () => {
+        this.firstName = 'Charlie';
+        this.lastName = 'Zha';
+        console.log('say hello',this)
+        console.log(this.firstName+this.lastName)
+    }
 
     saySomething = param => {
         // this.sayHello();
