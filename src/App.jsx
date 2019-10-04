@@ -18,6 +18,7 @@ import MaterialTableDemo from './components/MaterialTableDemo'
 import  LogIn from './components/LogIn'
 import  SignIn from './components/SignIn'
 import RouterExample from './components/RouterExample'
+import Fundamental from './Javascript/Fundamental'
 
 export default class App extends Component {
 
@@ -102,7 +103,8 @@ export default class App extends Component {
 
     return (
       <div>
-       <RouterExample />
+       <Fundamental />
+     {/* <RouterExample />*/} 
         {/*<SignIn 
           email ={this.state.email}
           password= {this.state.password}
