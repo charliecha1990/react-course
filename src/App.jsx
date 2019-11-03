@@ -98,13 +98,13 @@ export default class App extends Component {
 
     return (
       <div>
-        <LogIn 
+        {/* <LogIn 
           email={this.state.email}
           password={this.state.password}
           onSubmit={this.handleSubmit}
           onChange={this.handleChange}
-        />
-         {/* <ReduxTest /> */}
+        /> */}
+         <ReduxTest />
          {/* <ShouldComponentUpdate /> */}
          {/* <Decorator />
          <Closure /> */}
